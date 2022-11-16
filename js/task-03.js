@@ -12,3 +12,11 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+// обьявил ul
+const galeryContainerEl = document.querySelector('.gallery');
+//Внес li в ul 
+const makeGalery = images
+  .map((img) => `<li><img src="${img.url}" alt="${img.alt}"></li>`)
+  
+galeryContainerEl.insertAdjacentHTML("afterbegin", makeGalery);
+console.log(galeryContainerEl);
